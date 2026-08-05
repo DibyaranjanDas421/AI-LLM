@@ -1,9 +1,10 @@
 import os
 
-path = r"D:\AI-LLM-Engineer\Python\01-Introduction"
+# Using relative path based on the script location
+path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-print("Path:", path)
-print("Exists:", os.path.exists(path))
+print('Exists:', os.path.exists(path))
 
 if os.path.exists(path):
-    print(os.listdir(path))
+    print('Contents:', os.listdir(path))
+
